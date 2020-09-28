@@ -1,0 +1,43 @@
+# use ssh keys for optimal security for server with ssh login
+
+###############################################################
+# CLIENT SIDE
+###############################################################
+
+# generate key
+ssh-keygen
+
+# add a password for additional security when asked for
+
+# save ssh public & private key on you windows machine (not the server) 
+# save in default of specify location, press enter to save
+
+# for specific location
+ssh-keygen -f ~relative/path/file_name
+
+# typically keys are stored on windows in /user/.ssh/ 
+# 2 files: public key and private key
+
+###############################################################
+# SERVER SIDE
+###############################################################
+
+# create file on server to save the public key
+
+# make file 
+mkdir /path/to/dir
+
+# restricted access for user only
+chmod 700 /path/to/dir
+
+# create file
+vim.ssh/authorized_keys
+
+# install vim if not installed yet
+# press i to insert
+# :w to write
+# :q to save
+# copy/paste in cmdline: ctrl + shift + c/v
+
+
+
